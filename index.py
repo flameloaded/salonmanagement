@@ -76,7 +76,6 @@ def delete():
     my_cursor = con.cursor()
     querry = ('delete from transaction where transactionid=%s')
     value = (transaction_id.get(),)
-    print(value)
     my_cursor.execute(querry,value)
     con.commit()
     con.close()
